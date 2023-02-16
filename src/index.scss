@@ -1,0 +1,187 @@
+@font-face {
+  font-family: "Nekst-Black";
+  src: url("./assets/fonts/Nekst-Black.ttf");
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: "Gilroy-Regular";
+  src: url("./assets/fonts/Gilroy-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Gilroy-Bold";
+  src: url("./assets/fonts/Gilroy-Bold.ttf");
+  font-weight: 700;
+}
+
+:root {
+  --clr-black-900: hsl(0, 0%, 7%);
+  --clr-black-700: hsl(209, 17%, 24%);
+  --clr-gray-400: hsl(0, 0%, 34%);
+  --clr-gray-100: hsl(240, 4%, 95%);
+  --clr-orange-500: hsl(33, 100%, 54%);
+  --clr-orange-200: hsla(33, 100%, 54%, 0.4);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  font-family: "Nekst-Black", sans-serif;
+  color: var(--clr-black-900);
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+main {
+  min-height: 100vh;
+  padding: 2.75rem 1.25rem;
+
+  @media (min-width: 768px) {
+    padding: 4rem 2.25rem;
+  }
+
+  @media (min-width: 1120px) {
+    padding: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+// .calculator {
+// }
+
+.calculator__title {
+  font-size: 2.125rem;
+  line-height: 0.9;
+  margin-bottom: 2rem;
+
+  @media (min-width: 768px) {
+    font-size: 3.375rem;
+    margin-bottom: 2.75rem;
+  }
+
+  @media (min-width: 1120px) {
+    max-width: 47rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.calculator__credit-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+
+  @media (min-width: 768px) {
+    gap: 2.5rem;
+    margin-bottom: 2.75rem;
+  }
+
+  @media (min-width: 1120px) {
+    flex-direction: row;
+    gap: 2rem;
+  }
+}
+
+.calculator__footer {
+  display: grid;
+  align-items: center;
+  gap: 2rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, auto);
+  }
+
+  @media (min-width: 1120px) {
+    grid-template-columns: repeat(3, auto);
+  }
+}
+
+.calculator__total-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+
+  @media (min-width: 768px) {
+    gap: 0.5rem;
+    flex: 1;
+  }
+}
+
+.calculator__amount-title {
+  font-size: 0.875rem;
+  line-height: 1.36;
+  font-family: "Gilroy-Regular", sans-serif;
+
+  @media (min-width: 768px) {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}
+
+.calculator__amount-value {
+  font-size: 1.25rem;
+
+  @media (min-width: 768px) {
+    font-size: 3.375rem;
+    line-height: 0.9;
+  }
+}
+
+.button {
+  width: 100%;
+  border: none;
+  background-color: var(--clr-orange-500);
+  border-radius: 40px;
+  color: #fff;
+  padding: 1rem 3.125rem;
+  font-size: 1.375rem;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  @media (min-width: 768px) {
+    font-size: 1.875rem;
+  }
+
+  @media (min-width: 1120px) {
+    padding: 1rem 2.375rem;
+  }
+
+  &:hover {
+    background-color: var(--clr-black-900);
+  }
+
+  &:active {
+    background-color: var(--clr-gray-400);
+  }
+
+  &:disabled {
+    background-color: var(--clr-orange-200);
+  }
+}
